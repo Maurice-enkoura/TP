@@ -739,12 +739,12 @@
     </div>
 
     <script>
-        // Données initiales
+        
         const originalPrice = <?= $service->price ?>;
         const originalTitle = "<?= addslashes($service->title) ?>";
         const originalDescription = "<?= addslashes($service->description) ?>";
 
-        // Éléments DOM
+        
         const form = document.getElementById('serviceForm');
         const titleInput = document.getElementById('title');
         const descriptionInput = document.getElementById('description');
