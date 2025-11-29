@@ -1,20 +1,18 @@
 <?php
-// Charger l'autoloader
+
 require "../app/Core/autoload.php";
 
-// Démarrer la session
+
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-// Récupérer l'URI et la méthode
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $method = $_SERVER['REQUEST_METHOD'];
 
-// Instancier le contrôleur
 $controller = new ServiceController();
 
-// Système de routage simple
+
 try {
     switch (true) {
         case $uri === "/" || $uri === "/services":
